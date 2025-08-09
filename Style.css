@@ -1,0 +1,44 @@
+:root{
+  --bg: #faf7f2;
+  --ink: #1f2937;
+  --muted:#6b7280;
+  --gold:#d97706;
+  --card:#ffffff;
+  --border:#e5e7eb;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:linear-gradient(#fff, var(--bg));}
+.container{max-width:1100px;margin:0 auto;padding:0 16px}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.8);backdrop-filter:saturate(180%) blur(10px);border-bottom:1px solid var(--border);z-index:10}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:10px 0}
+.brand{font-weight:600}
+.links a{margin-left:16px;text-decoration:none;color:var(--ink);font-size:14px}
+.links a.btn{margin-left:24px}
+.hero{padding:72px 0;background:radial-gradient(1000px 400px at 0% 0%, rgba(217,119,6,.10), transparent), radial-gradient(1000px 400px at 100% 100%, rgba(217,119,6,.10), transparent)}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:24px}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.title{font-size:44px;line-height:1.1;margin:16px 0 8px}
+.title span{display:block;color:var(--gold)}
+.lead{font-size:18px;color:var(--muted);max-width:60ch}
+.tag{display:inline-block;padding:6px 10px;border-radius:999px;background:#fde68a;color:#92400e;font-size:12px;font-weight:600}
+.btn{display:inline-block;padding:10px 14px;border-radius:12px;background:var(--ink);color:#fff;text-decoration:none;border:1px solid var(--ink);font-weight:600}
+.btn.small{padding:6px 10px;font-size:12px}
+.btn.outline{background:#fff;color:var(--ink);border-color:var(--border)}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;box-shadow:0 1px 2px rgba(0,0,0,.03)}
+.countdown{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:12px 0}
+.box{padding:12px;border:1px solid var(--border);border-radius:12px;text-align:center;background:#fff}
+.num{font-size:28px;font-weight:700;font-variant-numeric:tabular-nums lining-nums}
+.lbl{font-size:11px;color:var(--muted)}
+.muted{color:var(--muted)}
+.small{font-size:12px}
+.section{padding:56px 0}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.grid-2,.grid-3{grid-template-columns:1fr}}
+.list{color:var(--muted)}
+.tags{display:flex;gap:8px;flex-wrap:wrap;margin-top:8px}
+.kv{display:flex;justify-content:space-between;border-bottom:1px dashed var(--border);padding:8px 0;font-size:14px}
+.poem{white-space:pre-line;line-height:1.6}
+.footer{border-top:1px solid var(--border);padding:24px 0;background:#fff}
+.footer-inner{display:flex;align-items:center;justify-content:space-between}
+.footer .links a{color:var(--muted);text-decoration:none;margin-left:12px}
