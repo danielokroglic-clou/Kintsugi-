@@ -23,7 +23,45 @@
       </nav>
     </div>
   </header>
-
+<!-- SECTION VIP À COLLER DANS VOTRE index.html --><section id="vip" class="vip-wrap">
+  <h2 class="vip-title">Rejoignez les Lecteurs VIP – Kintsugi</h2>  <!-- Remplacez EMBED_URL_ICI par l'URL <iframe> officielle copiée depuis Google Forms → Envoyer → </> -->  <div class="vip-embed">
+    <iframe
+      src="EMBED_URL_ICI"
+      width="100%"
+      height="1100"
+      frameborder="0"
+      marginheight="0"
+      marginwidth="0"
+      allowfullscreen
+      title="Formulaire VIP">
+    </iframe>
+  </div>  <!-- Lien de secours si l'embed est bloqué (utilise votre lien forms.gle) -->  <p class="vip-fallback">
+    Si le formulaire ne s'affiche pas, <a href="https://forms.gle/NYZ21YFcr8afAexy6" target="_blank" rel="noopener">ouvrez-le dans un nouvel onglet</a>.
+  </p>
+</section><style>
+  .vip-wrap{max-width:900px;margin:48px auto;padding:0 16px}
+  .vip-title{text-align:center;margin:0 0 16px 0;font-size:clamp(1.4rem,2.5vw,2rem)}
+  .vip-embed{position:relative;overflow:hidden;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,.08);background:#fff}
+  .vip-embed iframe{display:block;width:100%;}
+  .vip-fallback{text-align:center;margin-top:12px}
+  .vip-fallback a{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;background:#c08457;color:#fff}
+  .vip-fallback a:hover{background:#a86d45}
+  /* Mode sombre léger si votre site en dispose */
+  @media (prefers-color-scheme: dark){
+    .vip-embed{background:#1f1f1f;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+  }
+</style><script>
+  // Petit confort : si vous n'avez pas encore collé l'URL d'embed officielle,
+  // on masque l'iframe et on affiche seulement le bouton de secours.
+  (function(){
+    const iframe = document.querySelector('#vip iframe');
+    if(iframe && (!iframe.src || iframe.src.includes('EMBED_URL_ICI'))){
+      iframe.style.display = 'none';
+      const fb = document.querySelector('.vip-fallback');
+      if(fb){fb.insertAdjacentHTML('afterbegin','<span style="display:block;margin-bottom:8px">📎 Cliquez sur le bouton pour ouvrir le formulaire VIP.</span>');}
+    }
+  })();
+</script>
   <section class="hero">
     <div class="container hero-grid">
       <div>
