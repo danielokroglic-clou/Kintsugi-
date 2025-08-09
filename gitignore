@@ -1,0 +1,15 @@
+# Fichiers/dossiers temporaires
+*.log
+*.tmp
+*.swp
+
+# MacOS
+.DS_Store
+
+# Node (si jamais tu ajoutes npm plus tard)
+node_modules/
+dist/
+build/
+
+# Vercel cache
+.vercel
