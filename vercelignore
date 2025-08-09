@@ -1,0 +1,5 @@
+# Fichiers non nécessaires au déploiement
+README.md
+LICENSE
+.gitignore
+*.log
